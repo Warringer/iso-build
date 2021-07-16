@@ -122,8 +122,8 @@ jobs:
         name: Install Arch-Install-Scripts
         run: |          
           pkgver=23
-          sudo wget https://gitlab.archlinux.org/archlinux/archinstall/-/archive/master/archinstall-master.tar.gz
-          sudo tar -xvf archinstall-master.tar.gz
+          sudo wget -o arch-install-scripts-master.zip https://codeload.github.com/archlinux/arch-install-scripts/zip/refs/heads/master
+          sudo unzip arch-install-scripts-master.zip
           sudo make -C archinstall-master
           sudo make -C archinstall-master check
           sudo make -C archinstall-master PREFIX=/usr install
