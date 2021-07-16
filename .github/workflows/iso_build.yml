@@ -40,7 +40,7 @@ jobs:
     strategy:
       matrix:
         ###### EDIT HERE ######
-        EDITION: [xfce]
+        EDITION: [i3]
         BRANCH: [stable]
         SCOPE: [full]
         #######################
@@ -87,7 +87,7 @@ jobs:
           sudo make V=1
           sudo make install
           cd ..
-          sudo install -m644 pacman.conf.x86_64 /etc/pacman.conf
+          sudo install -m644 pacman.conf /etc/pacman.conf
           sudo install -m644 makepkg.conf /etc/
           sudo sed -i /etc/makepkg.conf \
             -e "s|@CARCH[@]|x86_64|g" \
@@ -109,7 +109,7 @@ jobs:
           sudo install -m0644 manjaro-trusted /usr/share/pacman/keyrings/
           cd ..
           
-          sudo git clone https://projects.archlinux.org/archlinux-keyring.git
+          sudo git clone https://gitlab.archlinux.org/archlinux/archlinux-keyring/
           cd archlinux-keyring
           sudo install -m0644 archlinux.gpg /usr/share/pacman/keyrings/
           sudo install -m0644 archlinux-trusted /usr/share/pacman/keyrings/
