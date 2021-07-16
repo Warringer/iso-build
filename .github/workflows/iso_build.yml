@@ -147,7 +147,7 @@ jobs:
         run: |          
           sudo wget -O mkinitcpio-29.zip https://codeload.github.com/archlinux/mkinitcpio/zip/refs/heads/master
           sudo unzip mkinitcpio-29.zip
-          sudo make -C mkinitcpio-29 install
+          sudo make -C mkinitcpio-master install
           sudo sed -i -e 's|File|Path|' /usr/share/libalpm/hooks/*hook
       -
         name: Install Manjaro-Tools
