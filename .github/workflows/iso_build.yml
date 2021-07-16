@@ -124,9 +124,9 @@ jobs:
           pkgver=23
           sudo wget -O arch-install-scripts-master.zip https://codeload.github.com/archlinux/arch-install-scripts/zip/refs/heads/master
           sudo unzip arch-install-scripts-master.zip
-          sudo make -C archinstall-master
-          sudo make -C archinstall-master check
-          sudo make -C archinstall-master PREFIX=/usr install
+          sudo make -C arch-install-scripts-master
+          sudo make -C arch-install-scripts-master check
+          sudo make -C arch-install-scripts-master PREFIX=/usr install
           
           sudo wget https://gitlab.manjaro.org/applications/pacman-mirrors/-/raw/v4.19x-stable/conf/pacman-mirrors.conf -O /etc/pacman-mirrors.conf
       -
